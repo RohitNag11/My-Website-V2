@@ -31,7 +31,14 @@ export default function Home() {
             Rohit Nag
           </h1>
           <div className={styles.role}>
-            A Master&#39;s Mechanical Engineering student at&nbsp;
+            I&apos;m a Software Developer at&nbsp;
+            <a
+              href="https://www.microsoft.com/en-gb/about/"
+              target="_blank"
+              rel="noreferrer">
+              Microsoft
+            </a>
+            &nbsp;with a background in Mechanical Engineering from&nbsp;
             <a
               href="https://www.imperial.ac.uk/ "
               target="_blank"
@@ -40,13 +47,13 @@ export default function Home() {
             </a>.
           </div>
           <div className={styles.description}>
-            Passionate about merging <em>Engineering</em>, <em>Computing</em> and <em>Design</em> with an interest in embedded systems, physics modelling and AI.
+            My passion lies in the intersection of <em>Engineering</em>, <em>Computing</em>, and <em>Design</em>, especially when it comes to embedded systems, physics modelling, and AI.
             <br />
-            Also a questionable&nbsp;
+            On the side, I occasionally also dabble in&nbsp;
             <TextTransitionBadge
               textArray={["UI / UX", "graphic", "product"]}
               speed={2000} />
-            &nbsp;designer on the side.
+            &nbsp;design.
           </div>
         </div>
         <div className={styles.profile}>

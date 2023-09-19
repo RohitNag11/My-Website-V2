@@ -41,21 +41,7 @@ function About() {
                             visitedCities={travelData.filter(city => city.type == 'visited')} />
                     </div>
                     <div className={styles.text}>
-                        Hi there! A brief introduction: I&apos;m a Master&apos;s Mechanical Engineering student at&nbsp;
-                        <a
-                            href="https://www.imperial.ac.uk"
-                            target="_blank"
-                            rel="noreferrer">
-                            Imperial College London
-                        </a>
-                        , specialising in Mechatronics and Aircraft Engine Technology. Currently, I&apos;m working on my Master&apos;s project on locating optimal peg-fixation positions for&nbsp;
-                        <a
-                            href="https://www.osstec.uk"
-                            target="_blank"
-                            rel="noreferrer">
-                            OSSTEC&apos;s
-                        </a>
-                        &nbsp;knee arthroplasty implants using modern and novel computational methods. My dream is to work on impactful solutions that combine engineering, design, and computing.
+                        Hi there! A brief introduction: I&apos;m a passionate Software Engineer by profession and have my technical roots in Mechanical Engineering. Moving forward, I&apos;m excited about weaving engineering principles with computing and design to craft impactful solutions.
                     </div>
                     <div className={styles.text}>
                         Outside work, I enjoy drawing, playing <HoverBadge hoverText={'🏃‍♂️ 🚴‍♂️ 🎾 🏸 🏓 🏏'}> sports</HoverBadge> and <HoverBadge hoverText={'Bucket List: 🇯🇵, 🇧🇴, 🇵🇪, 🇪🇸'}>travelling</HoverBadge>. I&apos;m lucky to have grown up in Oman, Libya, Brunei, Qatar and the UK, all of which I consider home. Enjoy exploring the globe to find the cities I&apos;ve lived in and the ones I&apos;ve visited.

@@ -19,8 +19,8 @@
 
         .thumbnail {
             position: relative;
-            margin: 0.5rem;
-            border-radius: 0.35em;
+            margin: var(--border-width-primary);
+            border-radius: 0.6rem;
             overflow: hidden;
             aspect-ratio: 1.5;
             background-color: var(--color-bg-disable);
@@ -57,7 +57,7 @@
             position: relative;
             text-align: left;
             padding: 1rem;
-            padding-top: 0;
+            padding-top: 0.3rem;
             display: flex;
             flex-direction: column;
 
