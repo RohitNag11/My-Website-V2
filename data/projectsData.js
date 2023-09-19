@@ -1,5 +1,48 @@
 export const projectsData = [
     {
+        id: "knee-implant",
+        name: "Orthopeadic Peg Fixation Optimisation",
+        subtitle: "Identification of peg positions for knee implants.",
+        start: new Date(2022, 9),
+        end: new Date(2023, 6),
+        featured: true,
+        type: "Computing",
+        tags: ["Python", "DICOM", "Mimics", "Uni"],
+        link: {},
+        thumbnail: {
+            href: "/images/projects/KneeImplant/render.png",
+            alt: "Knee Implant Render"
+        },
+        media: [
+            // {
+            //     image: {
+            //         href: "/images/projects/RobotArm/render.png",
+            //         alt: "Robot Arm Render"
+            //     }
+            // },
+        ],
+        people: [],
+        documents: [
+            {
+                name: "Thesis",
+                href: "/documents/projects/KneeImplant/thesis.pdf"
+            }
+        ],
+        description: [
+            "For my master's project at Imperial College London, I focused on computational methodologies tailored for the orthopaedic domain. Teaming up with OSSTEC and mentored by Professor Jonathan Jeffers and Dr. Maxwell Munford, my aim was to bridge academic insights with practical industry nuances, specifically addressing a particular challenge in orthopaedics.",
+
+            "OSSTEC is on the forefront of the orthopeadics field with their innovative implant designs. A pivotal aspect of this research centered around optimizing peg fixation locations in these implants to maximize patient outcomes and longevity.",
+
+            "By harnessing advanced computational approaches, I analysed patient anatomical data to refine these locations. Image processing, statistical methodologies, and clustering techniques played a central role in this endeavour.",
+
+            "With a select set of patient data, I implemented an automated computational model to provide patient-specific recommendations. The insights from this model were critical in suggesting enhancements for OSSTEC's implant designs, especially concerning peg fixation locations. A challenge emerged as the established implant sizes slightly deviated from the training data's parameters.",
+
+            "In parallel, another computational model was developed to categorize implant sizes, highlighting optimal designs tailored to diverse patient profiles. Despite the constraints of the dataset's size, the study heralded a promising path. With access to a more comprehensive dataset, the precision in determining peg fixation locations can be significantly enhanced."
+            ,
+        ]
+
+    },
+    {
         id: "engine",
         name: "FireTanker Aircraft Engine",
         subtitle: "Design of a new high-bypass turbofan engine.",
