@@ -20,7 +20,7 @@ export const projectsData = [
         people: [],
         documents: [],
         description: [
-            "While doing my masters in London, I got to work with OSSTEC, a London-based orthopaedics implant company. From that experience, I took on a side project to design and develop their website using Next.js. This project let me use what I learned academically in a real-world setting, creating a straightforward and user-friendly site.",
+            "While doing my masters in London, I got to work with OSSTEC, a London-based orthopaedics implant company. From that experience, I took on a side project to design and develop their website using Next.js. This project let me use what I learned from building my website in a real-world setting, creating a straightforward and user-friendly site.",
             "This was my first time freelancing, so I kept the design simple and clear. I wanted OSSTEC's website to be easy to use and represent their brand well. Overall, it was a great mix of my hobby in web design and my skills in software engineering."
         ]
     },
@@ -205,7 +205,7 @@ export const projectsData = [
         end: new Date(2023, 4),
         featured: true,
         type: "Hardware",
-        tags: ["Uni", "CAD", "Python",],
+        tags: ["Uni", "Solidworks", "Python",],
         link: {
             name: "Github Repo",
             href: "https://github.com/RohitNag11/RobotKin"
