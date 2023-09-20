@@ -26,7 +26,7 @@ export const projectsData = [
     },
     {
         id: "knee-implant",
-        name: "Orthopeadic Peg Fixation Optimisation",
+        name: "Orthopeadic Implant Fixation Optimisation",
         subtitle: "Identification of peg positions for knee implants.",
         start: new Date(2022, 9),
         end: new Date(2023, 6),

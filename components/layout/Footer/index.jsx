@@ -25,6 +25,14 @@ function Footer() {
                 </a>
             </div>
             <div className={styles.main}>
+                <div className={styles.contact}>
+                    Get in touch: &nbsp;
+                    <a
+                        href={`mailto:${websiteData.email}?subject=Hello from your website`}
+                        rel="noreferrer">
+                        {websiteData.email}
+                    </a>
+                </div>
                 <div className={styles.note}>Last updated: {websiteData.lastUpdated}</div>
                 <div className={styles.copyright}>© {websiteData.yearCreated} {websiteData.author}</div>
             </div>
