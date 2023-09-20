@@ -5,7 +5,7 @@ export const projectsData = [
         subtitle: "Design and development of OSSTEC's website.",
         start: new Date(2023, 7),
         end: new Date(2023, 8),
-        featured: true,
+        featured: false,
         type: "UI/UX",
         tags: ["React", "Next"],
         link: {
