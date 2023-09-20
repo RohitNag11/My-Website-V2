@@ -1,5 +1,30 @@
 export const projectsData = [
     {
+        id: "osstec-website",
+        name: "OSSTEC.uk",
+        subtitle: "Design and development of OSSTEC's website.",
+        start: new Date(2023, 7),
+        end: new Date(2023, 8),
+        featured: true,
+        type: "UI/UX",
+        tags: ["React", "Next"],
+        link: {
+            name: "osstec.uk",
+            href: "https://osstec.uk",
+        },
+        thumbnail: {
+            href: "/images/projects/OsstecWebsite/‎mockup.png",
+            alt: "Knee Implant Render"
+        },
+        media: [],
+        people: [],
+        documents: [],
+        description: [
+            "While doing my masters in London, I got to work with OSSTEC, a local orthopaedics implant company. From that experience, I took on a side project to design and develop their website using Next.js. This project let me use what I learned academically in a real-world setting, creating a straightforward and user-friendly site.",
+            "This was my first time freelancing, so I kept the design simple and clear. I wanted OSSTEC's website to be easy to use and represent their brand well. Overall, it was a great mix of my hobby in web design and my skills in software engineering."
+        ]
+    },
+    {
         id: "knee-implant",
         name: "Orthopeadic Peg Fixation Optimisation",
         subtitle: "Identification of peg positions for knee implants.",
@@ -904,7 +929,7 @@ export const projectsData = [
         subtitle: "An NLP-based data-analysis of article headlines.",
         start: new Date(2021, 8, 7),
         end: null,
-        featured: true,
+        featured: false,
         type: "Computing",
         tags: ["Python", "Data-Analysis", "Hackathon", "NLP", "ML"],
         link: {},

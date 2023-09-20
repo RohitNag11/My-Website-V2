@@ -2,7 +2,7 @@
     width: 100%;
     // padding-left: 0.3rem;
     margin-top: 1rem;
-    overflow: hidden;
+    // overflow: hidden;
     transition: all var(--speed-medium);
     border-radius: 0.3rem;
     min-width: 4rem;
@@ -72,12 +72,14 @@
         margin-top: 0;
         min-height: fit-content;
         height: 100%;
-        border: var(--border-secondary);
+        position: relative;
 
         .filterSectionHeader {
             background-color: var(--color-bg-disable);
+            border: var(--border-secondary);
             align-items: center;
             padding: 0.6rem;
+            border-radius: 0.3rem;
 
             >div {
                 font-size: 0.8rem;
@@ -87,7 +89,15 @@
         }
 
         .tags {
-            background-color: var(--color-bg-disable);
+            background-color: var(--color-glass);
+            border: var(--border-secondary);
+            backdrop-filter: blur(0.5rem);
+            position: absolute;
+            top: calc(100% + 0.3rem);
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            border-radius: 0.3rem;
         }
 
         &.collapsed {
