@@ -8,7 +8,7 @@ export const pagesData = [
     {
         title: "Projects",
         emoji: "🚀",
-        description: "Explore some of university and side projects.",
+        description: "Explore some of my university and side projects.",
         link: "/projects"
     },
     {
@@ -26,7 +26,7 @@ export const pagesData = [
     {
         title: "About",
         emoji: "👋",
-        description: "Learn about my background, experiences and skills.",
+        description: "Learn about my interests, background and experiences.",
         link: "/about"
     },
     {
