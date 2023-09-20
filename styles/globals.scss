@@ -245,6 +245,13 @@ html {
       box-sizing: border-box;
     }
 
+    h2 {
+      font-weight: 600;
+      font-size: 1.2rem;
+      color: var(--color-text-primary);
+      // opacity: 0.5;
+    }
+
     em {
       color: var(--color-text-primary);
       font-style: normal;

@@ -92,10 +92,20 @@
     }
 
     .block {
+        margin-bottom: 2rem;
+
         h2 {
-            font-size: 1.5rem;
-            color: var(--color-text-secondary);
+            // font-size: 1.5rem;
+            // color: var(--color-text-secondary);
             margin-bottom: 1rem;
+        }
+
+        .grid {
+            width: 100%;
+            display: grid;
+            // grid-auto-rows: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(clamp(100px, 100%, 300px), 1fr));
+            gap: 1rem;
         }
     }
 }

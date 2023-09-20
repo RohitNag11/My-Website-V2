@@ -9,6 +9,8 @@ import { travelData } from "../data/travelData";
 import { xpData } from '../data/xpData';
 import { eduData } from '../data/eduData';
 import { useAOS } from '../helpers/hooks';
+import { skillsData } from '../data/skillsData';
+import { SkillCard } from '../components/cards';
 
 function About() {
     useAOS();
@@ -54,6 +56,14 @@ function About() {
                 <div className={styles.block} data-aos="fade-up">
                     <h2>Education</h2>
                     <XpPane xpData={eduData} />
+                </div>
+                <div className={styles.block} data-aos="fade-up">
+                    <h2>Tools & Technologies</h2>
+                    <div className={styles.grid}>
+                        {skillsData.map((skill, i) => (
+                            <SkillCard key={i} skillData={skill} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </>

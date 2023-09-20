@@ -1,68 +1,71 @@
-export const skillsData = {
-    name: "Skills",
-    color: "#FF0000",
-    children: [
-        {
-            name: "Programming",
-            color: "#0000FF",
-            children: [
-                {
-                    name: "Python",
-                    color: "#0000FF",
-                    children: [
-                        { name: "SciPy", color: "#0000FF" },
-                        { name: "Scikit-Learn", color: "#0000FF" },
-                        { name: "TensorFlow", color: "#0000FF" },
-                        { name: "PyTorch", color: "#0000FF" },
-                        { name: "OpenCV", color: "#0000FF" },
-                    ],
-                },
-                { name: "MATLAB", color: "#0000FF" },
-                { name: "C", color: "#0000FF" },
-                { name: "C++", color: "#0000FF" },
-                { name: "C#", color: "#0000FF" },
-                {
-                    name: "JavaScript",
-                    color: "#0000FF",
-                    children: [
-                        { name: "SciPy", color: "#0000FF" },
-                        { name: "Scikit-Learn", color: "#0000FF" },
-                        { name: "TensorFlow", color: "#0000FF" },
-                        { name: "PyTorch", color: "#0000FF" },
-                        { name: "OpenCV", color: "#0000FF" },
-                    ],
-                },
-            ],
-        },
-        {
-            name: "Markup",
-            color: "#00FF00",
-            children: [
-                { name: "HTML", color: "#00FF00" },
-                { name: "CSS", color: "#00FF00" },
-                { name: "Latex", color: "#00FF00" },
-                { name: "Markdown", color: "#00FF00" },
-            ],
-        },
-        {
-            name: "CAD & FEA",
-            color: "#00FFFF",
-            children: [
-                { name: "SolidWorks", color: "#00FFFF" },
-                { name: "Fusion360", color: "#00FFFF" },
-                { name: "Siemens NX", color: "#00FFFF" },
-                { name: "Ansys", color: "#00FFFF" },
-            ],
-        },
-        {
-            name: "Creative",
-            color: "#CC00FF",
-            children: [
-                { name: "Adobe Illustrator", color: "#CC00FF" },
-                { name: "Adobe XD", color: "#CC00FF" },
-                { name: "Axure RP", color: "#CC00FF" },
-                { name: "Procreate", color: "#CC00FF" },
-            ],
-        },
-    ],
-};
+export const skillsData = [
+    {
+        name: "Languages",
+        children: [
+            { name: "Python", link: "https://www.python.org" },
+            { name: "C#", link: "https://learn.microsoft.com/en-us/dotnet/csharp/" },
+            { name: "C++", link: "https://cplusplus.com" },
+            { name: "C", link: "https://en.wikipedia.org/wiki/C_(programming_language)" },
+            { name: "JavaScript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+            { name: "TypeScript", link: "https://www.typescriptlang.org" },
+            { name: "MATLAB", link: "https://www.mathworks.com/products/matlab.html" },
+        ],
+    },
+    {
+        name: "Frontend",
+        children: [
+            { name: "React", link: "https://react.dev" },
+            { name: "Next", link: "https://nextjs.org" },
+            { name: "jQuery", link: "https://jquery.com" },
+            { name: "Bootstrap", link: "https://getbootstrap.com" },
+            { name: "THREE", link: "https://threejs.org" },
+            { name: "React-spring", link: "https://www.react-spring.dev" },
+            { name: "WinUI", link: "https://learn.microsoft.com/en-us/windows/apps/winui/" },
+        ],
+    },
+    {
+        name: "Scientific Libraries",
+        children: [
+            { name: "NumPy", link: "https://numpy.org" },
+            { name: "Pandas", link: "https://pandas.pydata.org" },
+            { name: "Scikit-learn", link: "https://scikit-learn.org/stable/" },
+            { name: "OpenCV", link: "https://opencv.org" },
+            { name: "PyDicom", link: "https://pydicom.github.io" },
+            { name: "TensorFlow", link: "https://www.tensorflow.org" },
+            { name: "Simulink", link: "https://www.mathworks.com/products/simulink.html#:~:text=Simulink%20is%20a%20block%20diagram,and%20deploy%20without%20writing%20code." },
+        ],
+    },
+    {
+        name: "Engineering & CAD ",
+        children: [
+            { name: "SolidWorks", link: "https://www.solidworks.com" },
+            { name: "Fusion360", link: "https://www.autodesk.ae/products/fusion-360/overview" },
+            { name: "Siemens NX", link: "https://plm.sw.siemens.com/en-US/nx/" },
+            { name: "Blender", link: "https://www.blender.org" },
+            { name: "Ansys", link: "https://www.ansys.com" },
+            { name: "GasTurb", link: "https://www.gasturb.com" },
+            { name: "CES", link: "https://www.ansys.com/products/materials/granta-edupack" },
+            { name: "Mimics", link: "https://www.materialise.com/en/healthcare/mimics-innovation-suite/mimics" },
+        ],
+    },
+    {
+        name: "Markup & StyleSheets",
+        children: [
+            { name: "HTML", link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+            { name: "CSS", link: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+            { name: "Sass", link: "https://sass-lang.com" },
+            { name: "Latex", link: "https://www.latex-project.org" },
+            { name: "Markdown", link: "https://www.markdownguide.org" },
+            { name: "XAML", link: "https://learn.microsoft.com/en-us/dotnet/desktop/wpf/xaml/?view=netdesktop-7.0" },
+        ],
+    },
+    {
+        name: "Design",
+        children: [
+            { name: "Adobe Illustrator", link: "https://www.adobe.com/uk/" },
+            { name: "Adobe XD", link: "https://helpx.adobe.com/uk/support/xd.html" },
+            { name: "Axure RP", link: "https://www.axure.com" },
+            { name: "Procreate", link: "https://procreate.com" },
+        ],
+    },
+]

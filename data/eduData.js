@@ -15,7 +15,7 @@ export const eduData = [
                     "Grade: First Class Honours",
                     "Activities and societies: Triathlon, Space Society, Formula Student."
                 ],
-                skills: ["SolidWorks", "Manufacturing", "ANSYS", "Python", "MATLAB", "C", "Arduino", "CES", "GasTurb", "Adobe Suite"]
+                skills: ["SolidWorks", "Manufacturing", "Ansys", "Python", "MATLAB", "C", "Arduino", "CES", "GasTurb", "Adobe Suite"]
             }
         ]
     },
