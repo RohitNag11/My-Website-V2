@@ -15,9 +15,9 @@
         cursor: pointer;
         background-color: var(--color-bg);
         z-index: 2;
-        // border-radius: 0.3rem;
+        border-radius: 0.3rem;
         padding: 0.4rem;
-        transition: background-color var(--speed-medium);
+        transition: background-color var(--speed-medium), box-shadow var(--speed-medium);
 
         >div {
             font-size: 0.9rem;
@@ -43,9 +43,10 @@
         flex-wrap: wrap;
         gap: 0.4rem;
         overflow: hidden;
-        transition: all var(--speed-medium);
+        transition: height var(--speed-medium), opacity var(--speed-medium);
         // z-index: 1;
         opacity: 1;
+        max-height: 100vh;
     }
 
     &.collapsed {
@@ -60,7 +61,7 @@
         .tags {
             padding: 0rem 0.4rem;
             opacity: 0;
-            height: 0;
+            max-height: 0;
         }
     }
 }
@@ -79,12 +80,18 @@
             border: var(--border-secondary);
             align-items: center;
             padding: 0.6rem;
-            border-radius: 0.3rem;
+            background-color: var(--color-glass);
+            box-shadow: var(--shadow-large);
 
             >div {
                 font-size: 0.8rem;
                 font-weight: 400;
                 color: var(--color-text-secondary);
+            }
+
+            &:hover {
+                background-color: var(--color-bg-disable);
+                box-shadow: var(--shadow-small);
             }
         }
 
@@ -98,6 +105,7 @@
             width: 100%;
             z-index: 1;
             border-radius: 0.3rem;
+            box-shadow: var(--shadow-large);
         }
 
         &.collapsed {

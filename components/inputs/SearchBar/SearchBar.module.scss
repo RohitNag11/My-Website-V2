@@ -1,7 +1,6 @@
 .searchBar {
     display: flex;
     position: relative;
-    overflow: hidden;
 
     .icon {
         position: absolute;
@@ -22,10 +21,15 @@
         padding-left: 2.1rem;
         border-radius: 0.3rem;
         border: var(--border-secondary);
-        box-shadow: inset var(--shadow-small);
+        box-shadow: var(--shadow-large);
         background: var(--color-glass);
         transition: all var(--speed-medium);
         color: var(--color-accent-primary);
+
+        &:hover {
+            border-color: var(--color-accent-primary);
+            box-shadow: var(--shadow-small);
+        }
 
         &:active,
         &:focus-within {
