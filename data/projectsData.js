@@ -205,7 +205,7 @@ export const projectsData = [
         end: new Date(2023, 4),
         featured: true,
         type: "Hardware",
-        tags: ["Uni", "Solidworks", "Python",],
+        tags: ["Uni", "SolidWorks", "Python",],
         link: {
             name: "Github Repo",
             href: "https://github.com/RohitNag11/RobotKin"
