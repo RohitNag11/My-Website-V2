@@ -3,6 +3,7 @@
     flex-direction: column;
     width: 100%;
     height: fit-content;
+    // gap: 1rem;
 
     .header {
         display: flex;
@@ -21,26 +22,24 @@
     .searchSection {
         margin-top: 1.2rem;
     }
+
+    .filterSections {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 1500px) {
     .filterPane {
         flex-direction: row;
         gap: 1rem;
-        align-items: flex-start;
+        align-items: stretch;
         margin-bottom: 1rem;
 
         .header {
-            height: 100%;
-            // order: 0;
-            // position: absolute;
             top: 100%;
-            flex-grow: 1;
             justify-content: flex-start;
-
-            >div {
-                height: 100% !important;
-            }
+            order: 2;
 
             h3 {
                 display: none;
@@ -49,7 +48,15 @@
 
         .searchSection {
             margin-top: 0;
+            order: 0;
+            flex-grow: 1;
+        }
+
+        .filterSections {
+            flex-direction: row;
+            gap: 1rem;
             order: 1;
+            flex-grow: 1;
         }
 
 
@@ -59,24 +66,18 @@
 
 @media (max-width: 600px) {
     .filterPane {
-        flex-wrap: wrap;
-        justify-content: flex-end;
         align-items: stretch;
-
-        >div {
-            order: 2;
-        }
+        flex-direction: column;
+        margin-bottom: 0.5rem;
 
         .header {
             height: auto;
             max-height: 2.2rem;
+            justify-content: flex-end;
         }
 
         .searchSection {
-            flex: 0 0 100%;
-            flex-grow: 1;
             margin-top: 0;
-            order: 0;
         }
     }
 }

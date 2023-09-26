@@ -4,60 +4,76 @@ import { TagFilterToggle, ClearFilterButton } from '../../buttons';
 import { SearchBar } from '../../inputs';
 import FilterSection from './FilterSection';
 
-function FilterPane({ name, count, filterFunction, typeFilterState, tagsFilterState, selectableTags, selectableTypes }) {
-    const [clearSearch, setClearSearch] = useState(false)
+function FilterPane({
+    name,
+    initData,
+    filterBy,
+    searchBy,
+    clearFilterByProperty,
+    clearSearch,
+    clearAll,
+    activeFilters,
+    allPropertiesAndValues,
+    filterablePropertiesAndValues,
+    filterableProperties,
+    searchParams,
+}) {
+
+    const [loaded, setLoaded] = useState(false);
+    const [searchInput, setSearchInput] = useState('');
 
     useEffect(() => {
-        setClearSearch(false)
-    }, [count])
+        if (initData.length) {
+            setLoaded(true);
+        }
+    }, [initData]);
+
+    const customClearAll = () => {
+        clearAll();
+        setSearchInput('');
+    };
 
     return (
         <div className={styles.filterPane}>
             <div className={styles.header}>
                 <h3>Filter {name}</h3>
-                <ClearFilterButton count={count} clearFilterFunction={() => {
-                    filterFunction({ clear: true })
-                    setClearSearch(true)
-                }} />
+                <ClearFilterButton count={Object.values(activeFilters).reduce((acc, currArray) => acc + currArray.length, 0) + (searchInput ? 1 : 0)} clearFilterFunction={customClearAll} />
             </div>
             <div className={styles.searchSection}>
-                <SearchBar forceClear={clearSearch} filterFunction={filterFunction} />
+                <SearchBar
+                    clearSearch={clearSearch}
+                    searchBy={searchBy}
+                    searchParams={searchParams}
+                    searchQuery={searchInput}
+                    setSearchQuery={setSearchInput}
+                />
             </div>
-            <FilterSection name='Type'>
-                {Object.keys(typeFilterState).map((type) => {
-                    const selectable = selectableTypes.has(type)
-                    return (
-                        <TagFilterToggle
-                            key={type}
-                            onClick={() => {
-                                filterFunction({ type: type })
-                            }}
-                            forceDisable={!Boolean(count)}
-                            selectable={selectable}
-                        >
-                            {type}
-                        </TagFilterToggle>
-                    )
-                })}
-            </FilterSection>
-            <FilterSection name='Tags'>
-                {Object.keys(tagsFilterState).map((tag) => {
-                    const selectable = selectableTags.has(tag)
-                    return (
-                        <TagFilterToggle
-                            key={tag}
-                            onClick={() => {
-                                filterFunction({ tag: tag })
-                            }}
-                            forceDisable={!Boolean(count)}
-                            selectable={selectable}>
-                            {tag}
-                        </TagFilterToggle>
-                    )
-                })}
-            </FilterSection>
+            <div className={styles.filterSections}>
+                {filterableProperties.map((property) => (
+                    <FilterSection
+                        name={property}
+                        key={property}
+                        activeFiltersLen={activeFilters[property] ? activeFilters[property].length : 0}
+                    >
+                        {loaded && allPropertiesAndValues[property].map((value) => (
+                            <TagFilterToggle
+                                key={value}
+                                onClick={() => filterBy(property, value)}
+                                selectable={filterablePropertiesAndValues[property] ? filterablePropertiesAndValues[property].includes(value) : false}
+                                active={activeFilters[property] && activeFilters[property].includes(value)}
+                            >
+                                {value}
+                            </TagFilterToggle>
+                        ))}
+                        <ClearFilterButton
+                            count={activeFilters[property] ? activeFilters[property].length : 0}
+                            clearFilterFunction={() => clearFilterByProperty(property)}
+                        />
+                    </FilterSection>
+                ))}
+            </div>
         </div>
     );
 }
 
-export default FilterPane
+export default FilterPane;

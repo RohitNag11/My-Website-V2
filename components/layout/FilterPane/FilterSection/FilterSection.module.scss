@@ -1,11 +1,9 @@
 .filterSection {
     width: 100%;
-    // padding-left: 0.3rem;
-    margin-top: 1rem;
-    // overflow: hidden;
     transition: all var(--speed-medium);
     border-radius: 0.3rem;
     min-width: 4rem;
+    margin-top: 1rem;
 
     .filterSectionHeader {
         user-select: none;
@@ -22,6 +20,11 @@
         >div {
             font-size: 0.9rem;
             transition: all var(--speed-medium);
+
+            .filterSectionActiveFilters {
+                color: var(--color-accent-primary);
+                transition: opacity var(--speed-medium);
+            }
         }
 
         .filterSectionExpander {
@@ -69,7 +72,7 @@
 
 @media (max-width: 1500px) {
     .filterSection {
-        width: 20rem;
+        min-width: 20rem;
         margin-top: 0;
         min-height: fit-content;
         height: 100%;
@@ -110,14 +113,19 @@
 
         &.collapsed {
             height: 100%;
-            width: 5rem;
+            min-width: 5rem;
         }
     }
 }
 
 @media (max-width: 600px) {
     .filterSection {
-        width: 12rem;
+        // width: 7rem;
         flex-grow: 1;
+
+        .tags {
+            max-height: 40vh;
+            overflow-y: auto;
+        }
     }
 }

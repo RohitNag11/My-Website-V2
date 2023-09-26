@@ -10,7 +10,9 @@
     transition: all var(--speed-medium);
     text-align: center;
     border: var(--border-secondary);
+    border-color: transparent;
     align-items: center;
+    min-width: 10ch;
 
     &.active {
         cursor: pointer;

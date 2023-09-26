@@ -1,38 +1,26 @@
 import styles from './SearchBar.module.scss'
 import { useState, useRef, useEffect } from 'react';
 
-function SearchBar({ filterFunction, forceClear }) {
+function SearchBar({ clearSearch, searchBy, searchParams, searchQuery, setSearchQuery }) {
 
-    const inputRef = useRef(null)
-    const [message, setMessage] = useState('');
-
-    const handleChange = e => {
-        setMessage(e.target.value);
-    };
-
-    const handleClear = e => {
-        setMessage('');
-    };
-
+    // Combined both useEffects
     useEffect(() => {
-        forceClear ? setMessage('') : null;
-    }, [forceClear]);
-
-    useEffect(() => {
-        filterFunction({ searchPhrase: message });
-    }, [filterFunction, message]);
+        if (searchQuery !== '') {
+            searchBy(searchParams, searchQuery);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [searchQuery]);
 
     return (
-        <div className={[styles.searchBar, message ? styles.active : ''].join(' ')}>
+        <div className={[styles.searchBar, searchQuery ? styles.active : ''].join(' ')}>
             <div className={styles.icon}>🔍</div>
             <input
-                ref={inputRef}
                 type="text"
-                onChange={handleChange}
-                value={message}
-                placeholder='Search...' />
-            <button onClick={handleClear}>✕</button>
-
+                onChange={(e) => setSearchQuery(e.target.value)}
+                value={searchQuery}
+                placeholder='Search...'
+            />
+            <button onClick={() => { clearSearch(); setSearchQuery(''); }}>✕</button>
         </div>
     );
 }

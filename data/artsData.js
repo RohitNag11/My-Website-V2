@@ -11,7 +11,7 @@ export const artsData = [
     },
     {
         id: 'ae86',
-        title: 'Toyata AE86',
+        title: 'Toyota AE86',
         date: new Date(2022, 2),
         mediums: ['Alcohol Marker', 'Fineliner'],
         image: {
@@ -143,7 +143,7 @@ export const artsData = [
         id: 'razor',
         title: "Razor Product Design",
         date: new Date(2020, 10),
-        mediums: ['Alchol Marker', 'Fineliner'],
+        mediums: ['Alcohol Marker', 'Fineliner'],
         image: {
             href: '/images/art/razor.jpg',
             alt: "Product design sketch of a razor.",
@@ -153,7 +153,7 @@ export const artsData = [
         id: 'bikeframe',
         title: "eBike Frame Concept",
         date: new Date(2020, 10),
-        mediums: ['Alchol Marker', 'Fineliner'],
+        mediums: ['Alcohol Marker', 'Fineliner'],
         image: {
             href: '/images/art/bikeframe.jpg',
             alt: "Concept sketch of a eBikeFrame.",
