@@ -1,4 +1,25 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect } from 'react';
+
+const computePropertiesAndValues = (data) => {
+    const propertiesAndValues = {};
+
+    data.forEach(item => {
+        for (const prop in item) {
+            if (!propertiesAndValues[prop]) propertiesAndValues[prop] = new Set();
+            if (Array.isArray(item[prop])) {
+                item[prop].forEach(val => propertiesAndValues[prop].add(val));
+            } else {
+                propertiesAndValues[prop].add(item[prop]);
+            }
+        }
+    });
+
+    for (const prop in propertiesAndValues) {
+        propertiesAndValues[prop] = [...propertiesAndValues[prop]];
+    }
+
+    return propertiesAndValues;
+};
 
 
 export function useFilterAndSearch(initialData) {
@@ -10,40 +31,15 @@ export function useFilterAndSearch(initialData) {
     const [allPropertiesAndValues, setAllPropertiesAndValues] = useState({});
     const [filterablePropertiesAndValues, setFilterablePropertiesAndValues] = useState({});
 
-    const computePropertiesAndValues = useMemo(
-        () => data => {
-            const propertiesAndValues = {};
-
-            data.forEach(item => {
-                for (const prop in item) {
-                    if (!propertiesAndValues[prop]) propertiesAndValues[prop] = new Set();
-                    if (Array.isArray(item[prop])) {
-                        item[prop].forEach(val => propertiesAndValues[prop].add(val));
-                    } else {
-                        propertiesAndValues[prop].add(item[prop]);
-                    }
-                }
-            });
-
-            // Convert Set to Array for easier consumption
-            for (const prop in propertiesAndValues) {
-                propertiesAndValues[prop] = [...propertiesAndValues[prop]];
-            }
-
-            return propertiesAndValues;
-        },
-        []
-    );
-
     useEffect(() => {
         const propertiesAndValues = computePropertiesAndValues(initData);
         setAllPropertiesAndValues(propertiesAndValues);
-    }, [initData, computePropertiesAndValues]);
+    }, [initData]);
 
     useEffect(() => {
         const propertiesAndValues = computePropertiesAndValues(filteredData);
         setFilterablePropertiesAndValues(propertiesAndValues);
-    }, [filteredData, computePropertiesAndValues]);
+    }, [filteredData]);
 
     useEffect(() => {
         let tempData = [...initData];
@@ -68,7 +64,7 @@ export function useFilterAndSearch(initialData) {
         });
 
         setFilteredData(tempData);
-    }, [activeFilters, searchQuery, searchProps]);
+    }, [activeFilters, searchQuery, searchProps, initData]);
 
     const filterBy = (property, value) => {
         setActiveFilters(prev => {
@@ -117,13 +113,13 @@ export function useFilterAndSearch(initialData) {
     return {
         initData,
         filteredData,
+        activeFilters,
+        allPropertiesAndValues,
+        filterablePropertiesAndValues,
         filterBy,
         searchBy,
         clearFilterByProperty,
         clearSearch,
         clearAll,
-        activeFilters,
-        allPropertiesAndValues,
-        filterablePropertiesAndValues
     };
 };
