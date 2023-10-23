@@ -1,38 +1,69 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OSSTEC Website
 
-## Getting Started
+A Next.js 13 website for OSSTEC.
 
-First, run the development server:
+## Table of Contents
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. [Getting Started](#getting-started)
+2. [Usage](#usage)
+3. [Contributing](#contributing)
+4. [License](#license)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+These instructions will get you a copy of the project up and running on your local machine for development purposes.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Prerequisites
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+1. **Node.js**: Download and install Node.js from [nodejs.org](https://nodejs.org/). Choose the LTS version for a more stable release.
+2. **Git**: Download and install Git from [git-scm.com](https://git-scm.com/).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Setting Up Development Environment
 
-## Learn More
+1. **Download Visual Studio Code**: If not installed, download VS Code from [here](https://code.visualstudio.com/).
+2. **Install Essential Extensions**: Open VS Code and go to the Extensions view by clicking the square icon on the sidebar. Install the following extensions:
+    - ESLint
+    - Prettier
+    - Next.js
+    - (Any other extensions you find useful)
 
-To learn more about Next.js, take a look at the following resources:
+### Clone the Repository
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Open a terminal (can be the built-in terminal in VS Code).
+2. Navigate to the folder where you want to clone the project.
+3. Run the following command:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    git clone https://github.com/RohitNag11/osstecWebsite.git
+    ```
 
-## Deploy on Vercel
+### Install Project Dependencies
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Navigate to your project folder in the terminal.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    cd your-repo
+    ```
 
+2. Run the following command to install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+### Start Development Server
+
+1. To start the development server, run:
+
+    ```bash
+    npm run dev
+    ```
+
+2. Open your web browser and navigate to `http://localhost:3000`.
+
+## Usage
+
+## Contributing
+
+## License
 
 <!-- Licence -->
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
