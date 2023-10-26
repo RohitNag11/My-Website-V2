@@ -7,10 +7,17 @@ export const xpData = [
         link: 'https://www.microsoft.com/en-gb/about/',
         roles: [
             {
+                position: "Software Engineer",
+                start: new Date(2023, 9),
+                end: new Date(),
+                description: "Working within the Microsoft Search Assistance & Intelligence (MSAI) team. Developing the new People in Taskbar app in Windows 11.",
+                skills: ["C#", "XAML"]
+            },
+            {
                 position: "Software Engineer Intern",
                 start: new Date(2022, 6),
                 end: new Date(2022, 8, 30),
-                description: "Worked in the Microsoft Search Assistance & Intelligence (MSAI) team. Developed within the Windows OS code-base, specifically on the preprocessing of telemetry data for the training of File Explorer recommendations models.",
+                description: "Developed within the Windows OS code-base, specifically on the preprocessing of telemetry data for the training of File Explorer recommendations models.",
                 skills: ["C++", "C#", "XAML"]
             }
         ]

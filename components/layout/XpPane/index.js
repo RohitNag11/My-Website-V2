@@ -4,6 +4,7 @@ import { IconButton } from "../../buttons";
 import { DateDiv } from "../../badges";
 import { Tag } from "../../badges";
 import { useAOS } from "../../../helpers/hooks";
+import { isDateSame } from "../../../helpers/date";
 
 function XpPane({ xpData }) {
     useAOS()
@@ -40,9 +41,10 @@ function XpPane({ xpData }) {
                     </div>
                 </div>
                 {selectedXp.roles.map((role, i) => {
+                    const end = role.end ? role.end : new Date()
                     return (
-                        <div key={i} className={styles.role}>
-                            <DateDiv start={role.start} end={role.end} duration longDate></DateDiv>
+                        <div key={i} className={[styles.role, isDateSame(end, new Date()) ? styles.current : ''].join(' ')}>
+                            <DateDiv start={role.start} end={end} duration longDate />
                             <div className={styles.position}>{role.position}</div>
                             <div className={styles.description}>
                                 {typeof role.description === 'string' && <div className={styles.text}>{role.description}</div>}

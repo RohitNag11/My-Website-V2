@@ -53,6 +53,7 @@
             border-top: var(--border-secondary);
             display: flex;
             flex-direction: column;
+            position: relative;
             // gap: 0.4rem;
 
             >div {
@@ -101,6 +102,14 @@
                             line-height: 1;
                         }
                     }
+                }
+            }
+
+            &.current {
+
+                .position {
+                    // text-decoration: underline;
+                    color: var(--color-hardware);
                 }
             }
         }
