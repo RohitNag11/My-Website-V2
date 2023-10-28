@@ -2,6 +2,7 @@ import styles from './SearchBar.module.scss'
 import { useState, useRef, useEffect } from 'react';
 
 function SearchBar({ clearSearch, searchBy, searchParams, searchQuery, setSearchQuery }) {
+    const [clearHovered, setClearHovered] = useState(false);
 
     // Combined both useEffects
     useEffect(() => {
@@ -12,7 +13,7 @@ function SearchBar({ clearSearch, searchBy, searchParams, searchQuery, setSearch
     }, [searchQuery]);
 
     return (
-        <div className={[styles.searchBar, searchQuery ? styles.active : ''].join(' ')}>
+        <div className={[styles.searchBar, searchQuery && styles.active, clearHovered && styles.clearHovered].join(' ')}>
             <div className={styles.icon}>🔍</div>
             <input
                 type="text"
@@ -20,7 +21,13 @@ function SearchBar({ clearSearch, searchBy, searchParams, searchQuery, setSearch
                 value={searchQuery}
                 placeholder='Search...'
             />
-            <button onClick={() => { clearSearch(); setSearchQuery(''); }}>✕</button>
+            <button
+                onClick={() => { clearSearch(); setSearchQuery(''); }}
+                onMouseEnter={() => searchQuery && setClearHovered(true)}
+                onMouseLeave={() => setClearHovered(false)}
+            >
+                ✕
+            </button>
         </div>
     );
 }

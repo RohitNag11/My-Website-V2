@@ -47,7 +47,8 @@
         border: none;
         background: none;
         margin: 0.4rem;
-        cursor: pointer;
+        cursor: default;
+        pointer-events: none;
         opacity: 0;
         transition: all var(--speed-medium);
         color: var(--color-cancel);
@@ -64,10 +65,24 @@
 
         button {
             opacity: 1;
+            cursor: pointer;
+            pointer-events: all;
 
             &:hover {
                 text-shadow: var(--shadow-small-cancel);
             }
+        }
+    }
+
+    &.clearHovered {
+        .icon {
+            text-shadow: var(--shadow-small-cancel);
+        }
+
+        input {
+            background: rgba(var(--rgb-cancel), 0.15);
+            color: var(--color-cancel);
+            border-color: var(--color-cancel);
         }
     }
 }

@@ -68,6 +68,7 @@ function FilterPane({
                         <ClearFilterButton
                             count={activeFilters[property] ? activeFilters[property].length : 0}
                             clearFilterFunction={() => clearFilterByProperty(property)}
+                            text={property}
                         />
                     </FilterSection>
                 ))}

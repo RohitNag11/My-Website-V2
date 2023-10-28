@@ -2,7 +2,7 @@
     user-select: none;
     display: flex;
     border-radius: 0.3rem;
-    padding: 0.2rem 0.5rem;
+    padding: 0.3rem;
     justify-content: center;
     width: auto;
     font-size: 0.7rem;
@@ -13,6 +13,8 @@
     border-color: transparent;
     align-items: center;
     min-width: 10ch;
+    height: 100%;
+    backdrop-filter: blur(0.5rem);
 
     &.active {
         cursor: pointer;
