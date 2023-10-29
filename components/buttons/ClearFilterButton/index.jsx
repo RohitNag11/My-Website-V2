@@ -7,7 +7,7 @@ function ClearFilterButton({ count, clearFilterFunction, text = null }) {
         <div
             className={[styles.button, count ? styles.active : ''].join(' ')}
             onClick={count ? clearFilterFunction : null}>
-            {count} {text ? text : (count === 1 ? 'filter' : 'filters')} {count ? '✕ ' : ''}
+            {count} {text} {count === 1 ? 'filter' : 'filters'} {count ? '✕ ' : ''}
         </div>
     );
 }

@@ -99,9 +99,14 @@ function ProjectPage({ project }) {
                     <div className={styles.typeTag}>
                         <TypeTag type={project.type}></TypeTag>
                     </div>
-                    {project.tags.map((tag) => {
+                    {project.context.map((name) => {
                         return (
-                            <Tag key={tag} >{tag}</Tag>
+                            <Tag key={name} emph>{name}</Tag>
+                        )
+                    })}
+                    {project.tech.map((name) => {
+                        return (
+                            <Tag key={name} >{name}</Tag>
                         )
                     })}
                 </div>

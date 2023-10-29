@@ -46,8 +46,8 @@ function Projects() {
                         activeFilters={activeFilters}
                         allPropertiesAndValues={allPropertiesAndValues}
                         filterablePropertiesAndValues={filterablePropertiesAndValues}
-                        filterableProperties={['type', 'tags']}
-                        searchParams={["name", "subtitle", "type", "tags"]}
+                        filterableProperties={['type', 'context', 'tech']}
+                        searchParams={["name", "subtitle", "type", "context", 'tech']}
                     />
                 </div>
                 <div className={styles.datePaneContainer}>

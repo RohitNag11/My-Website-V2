@@ -14,4 +14,8 @@
     &.noShadow {
         box-shadow: none;
     }
+
+    &.emph {
+        color: var(--color-text-primary);
+    }
 }

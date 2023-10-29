@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt';
 import Link from 'next/link';
 import { Tag, DateDiv, TypeTag } from '../../badges';
 
-function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thumbnail, hidden }) {
+function ProjectCard({ id, name, subtitle, start, end, featured, type, tech, context, thumbnail, hidden }) {
     const [hover, setHover] = useState(false);
     const [active, setActive] = useState(false);
     const [mobile, setMobile] = useState(window.innerWidth < 500)
@@ -77,9 +77,14 @@ function ProjectCard({ id, name, subtitle, start, end, featured, type, tags, thu
                             &rarr;
                         </div>
                         <div className={styles.tags}>
-                            {tags.map((tag, idx) => {
+                            {tech.map((name, idx) => {
                                 return (
-                                    <Tag key={tag}>{tag}</Tag>
+                                    <Tag key={name}>{name}</Tag>
+                                )
+                            })}
+                            {context.map((name, idx) => {
+                                return (
+                                    <Tag key={name} emph>{name}</Tag>
                                 )
                             })}
                         </div>

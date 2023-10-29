@@ -33,6 +33,10 @@ function FilterPane({
         setSearchInput('');
     };
 
+    useEffect(() => {
+        console.log(filterablePropertiesAndValues)
+    }, [filterablePropertiesAndValues])
+
     return (
         <div className={styles.filterPane}>
             <div className={styles.header}>

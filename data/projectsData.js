@@ -7,7 +7,8 @@ export const projectsData = [
         end: new Date(2023, 8),
         featured: false,
         type: "UI/UX",
-        tags: ["React", "Next"],
+        context: ["Freelance"],
+        tech: ["React", "Next"],
         link: {
             name: "osstec.uk",
             href: "https://osstec.uk",
@@ -32,7 +33,8 @@ export const projectsData = [
         end: new Date(2023, 6),
         featured: true,
         type: "Computing",
-        tags: ["Python", "DICOM", "Mimics", "Uni"],
+        context: ["Uni"],
+        tech: ["Python", "DICOM", "Mimics"],
         link: {},
         thumbnail: {
             href: "/images/projects/KneeImplant/render.png",
@@ -75,7 +77,8 @@ export const projectsData = [
         end: new Date(2023, 2),
         featured: true,
         type: "Engineering",
-        tags: ["SolidWorks", "GasTurb", "Python", "Uni"],
+        context: ["Uni"],
+        tech: ["Python", "SolidWorks", "GasTurb"],
         link: {
             name: "Github Repo",
             href: "https://github.com/RohitNag11/JetEngineDesigner"
@@ -205,7 +208,8 @@ export const projectsData = [
         end: new Date(2023, 4),
         featured: true,
         type: "Hardware",
-        tags: ["Uni", "SolidWorks", "Python",],
+        context: ["Uni"],
+        tech: ["Python", "SolidWorks", "JavaScript", "Three.js"],
         link: {
             name: "Github Repo",
             href: "https://github.com/RohitNag11/RobotKin"
@@ -240,7 +244,8 @@ export const projectsData = [
         end: new Date(2022, 7),
         featured: true,
         type: "UI/UX",
-        tags: ["WinUI3", "XAML", "C#", "Hackathon"],
+        context: ["Hackathon"],
+        tech: ["WinUI", "XAML", "C#"],
         link: {
             name: "Github Repo",
             href: "https://github.com/RohitNag11/CheatSheet"
@@ -298,7 +303,8 @@ export const projectsData = [
         end: new Date(2021, 6),
         featured: true,
         type: "Engineering",
-        tags: ["Ansys", "SolidWorks", "CES", "Manufacturing", "Uni"],
+        context: ["Uni"],
+        tech: ["CES", "SolidWorks", "Ansys"],
         link: {},
         thumbnail: {
             href: "/images/projects/EBike/render5.png",
@@ -450,7 +456,8 @@ export const projectsData = [
         end: new Date(2021, 3),
         featured: true,
         type: "Hardware",
-        tags: ["C", "Microcontroller", "Uni"],
+        context: ["Uni"],
+        tech: ["C"],
         link: {},
         thumbnail: {
             href: "/images/projects/Buggy/buggy3.jpg",
@@ -531,7 +538,8 @@ export const projectsData = [
         end: null,
         featured: false,
         type: "Engineering",
-        tags: ["SolidWorks", "CES", "Uni"],
+        context: ["Uni"],
+        tech: ["SolidWorks", "CES"],
         link: {},
         thumbnail: {
             href: "/images/projects/MobulaRay/render1.png",
@@ -650,7 +658,8 @@ export const projectsData = [
         end: null,
         featured: false,
         type: "Computing",
-        tags: ["Python", "Uni"],
+        context: ["Uni"],
+        tech: ["Python"],
         link: {},
         thumbnail: {
             href: "/images/projects/HeatDiffusion/heatmodel.png",
@@ -692,7 +701,8 @@ export const projectsData = [
         end: new Date(2019, 11),
         featured: true,
         type: "Engineering",
-        tags: ["SolidWorks", "Manufacturing", "Uni"],
+        context: ["Uni"],
+        tech: ["SolidWorks", "CES"],
         link: {},
         thumbnail: {
             href: "/images/projects/Sonic/render1.png",
@@ -854,7 +864,8 @@ export const projectsData = [
         end: new Date(2019, 2),
         featured: false,
         type: "Engineering",
-        tags: ["SolidWorks", "Uni"],
+        context: ["Uni"],
+        tech: ["SolidWorks"],
         link: {},
         thumbnail: {
             href: "/images/projects/LiftDoor/render1.png",
@@ -931,7 +942,8 @@ export const projectsData = [
         end: null,
         featured: false,
         type: "Computing",
-        tags: ["Python", "Data-Analysis", "Hackathon", "NLP", "ML"],
+        context: ["Hackathon"],
+        tech: ["Python", "SciPi", "TextBlob"],
         link: {},
         thumbnail: {
             href: "/images/projects/DataOpen/thumbnail.png",
@@ -1042,7 +1054,8 @@ export const projectsData = [
         end: null,
         featured: false,
         type: "Engineering",
-        tags: ["SolidWorks", "Fusion360", "Hackathon"],
+        context: ["Hackathon"],
+        tech: ["SolidWorks", "Fusion360"],
         link: {},
         thumbnail: {
             href: "/images/projects/LunarDeployer/render3.png",
@@ -1141,7 +1154,8 @@ export const projectsData = [
         end: new Date(2020, 11),
         featured: true,
         type: "Design",
-        tags: ["SolidWorks", "Prototyping"],
+        context: ["Uni"],
+        tech: ["SolidWorks"],
         link: {
             name: "Product Website",
             href: "https://dac2020.wixsite.com/group4"
@@ -1244,7 +1258,8 @@ export const projectsData = [
         end: null,
         featured: false,
         type: "UI/UX",
-        tags: ["AdobeXD", "Hackathon"],
+        context: ["Hackathon"],
+        tech: ["AdobeXD"],
         link: {},
         thumbnail: {
             href: "/images/projects/CheckApp/mockup1.png",
@@ -1302,7 +1317,8 @@ export const projectsData = [
         end: new Date(2020, 2),
         featured: false,
         type: "Engineering",
-        tags: ["SolidWorks", "Competition"],
+        context: ["Competition"],
+        tech: ["SolidWorks", "Ansys"],
         link: {},
         thumbnail: {
             href: "/images/projects/RailGuide/render1.jpg",
@@ -1367,7 +1383,8 @@ export const projectsData = [
         end: new Date(2020, 1),
         featured: false,
         type: "Design",
-        tags: ["ProCreate", "Competition"],
+        context: ["Competition"],
+        tech: ["SolidWorks"],
         link: {},
         thumbnail: {
             href: "/images/projects/ProjectDaedalus/concept1.jpg",
@@ -1406,7 +1423,8 @@ export const projectsData = [
         end: null,
         featured: true,
         type: "Design",
-        tags: ["MATLAB", "SolidWorks", "Hackathon"],
+        context: ["Hackathon"],
+        tech: ["SolidWorks", "MATLAB"],
         link: {},
         thumbnail: {
             href: "/images/projects/Spiderman/render1.png",
@@ -1490,7 +1508,8 @@ export const projectsData = [
         end: new Date(2019, 1),
         featured: false,
         type: "Hardware",
-        tags: ["Arduino", "C"],
+        context: ["Uni"],
+        tech: ["Arduino"],
         link: {},
         thumbnail: {
             href: "/images/projects/Bioreactor/prototype1.jpg",
