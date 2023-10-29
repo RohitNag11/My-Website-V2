@@ -77,8 +77,6 @@ export function useFilterAndSearch(initialData) {
     const [searchQuery, setSearchQuery] = useState("");
     const [allPropertiesAndValues, setAllPropertiesAndValues] = useState({});
     const [filterablePropertiesAndValues, setFilterablePropertiesAndValues] = useState({});
-    const [lastSelectedProperty, setLastSelectedProperty] = useState("");
-    const [curSelectedProperty, setCurSelectedProperty] = useState("");
 
     useEffect(() => {
         const propertiesAndValues = computePropertiesAndValues(initData);
@@ -86,12 +84,9 @@ export function useFilterAndSearch(initialData) {
     }, [initData]);
 
     useEffect(() => {
-        if (lastSelectedProperty !== curSelectedProperty || Object.keys(activeFilters).length === 0) {
-            const propertiesAndValues = computeFilterablePropertiesAndValues(initData, activeFilters);
-            setFilterablePropertiesAndValues(propertiesAndValues);
-            setLastSelectedProperty(curSelectedProperty)
-        }
-    }, [activeFilters, initData, lastSelectedProperty, curSelectedProperty]);
+        const propertiesAndValues = computeFilterablePropertiesAndValues(initData, activeFilters);
+        setFilterablePropertiesAndValues(propertiesAndValues);
+    }, [activeFilters, initData]);
 
     useEffect(() => {
         let tempData = [...initData];
@@ -119,7 +114,6 @@ export function useFilterAndSearch(initialData) {
     }, [activeFilters, searchQuery, searchProps, initData]);
 
     const filterBy = (property, value) => {
-        setCurSelectedProperty(property);
         setActiveFilters(prev => {
             const newFilters = JSON.parse(JSON.stringify(prev));
 
@@ -146,7 +140,6 @@ export function useFilterAndSearch(initialData) {
     };
 
     const clearFilterByProperty = (property) => {
-        setCurSelectedProperty("");
         setActiveFilters(prev => {
             const newFilters = { ...prev };
             delete newFilters[property];
