@@ -2,12 +2,15 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
     border-top: var(--border-secondary);
     justify-content: center;
     align-items: center;
     font-size: 0.8rem;
     gap: 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 
     .main {
         display: flex;
@@ -15,11 +18,40 @@
         gap: 1rem;
         align-items: center;
         color: var(--color-text-secondary);
+        z-index: 2;
+
+        .note {
+            max-width: 520px;
+            line-height: 1rem;
+            z-index: 1;
+        }
     }
 
     .links {
         display: flex;
         justify-content: center;
         gap: 1rem;
+        z-index: 1;
+    }
+
+    .gradientBackground {
+        width: 100%;
+        height: 500%;
+        background: radial-gradient(rgba(var(--rgb-accent-primary), 0.1), var(--color-bg-secondary) 70%);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: radial-gradient(rgba(var(--rgb-accent-primary), 0.3), rgba(0, 0, 0, 0) 100%);
+        top: 0;
+        left: 0;
+        z-index: 1;
     }
 }

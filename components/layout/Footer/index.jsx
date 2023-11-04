@@ -33,8 +33,12 @@ function Footer() {
                         {websiteData.email}
                     </a>
                 </div>
+                <div className={styles.note}>About this website: <a href="https://nextjs.org" target="_blank" rel="noreferrer">Next.js</a> framework, <a href="https://www.prisma.io" target="_blank" rel="noreferrer">Prisma</a> database, <a href="https://next-auth.js.org" target="_blank" rel="noreferrer">NextAuth.js</a> authentication, <a href="https://sass-lang.com" target="_blank" rel="noreferrer">Sass</a> styling, <a href="https://threejs.org/docs/index.html#manual/en/introduction/Creating-a-scene" target="_blank" rel="noreferrer">Three.js</a> 3D rendering, <a href="https://www.react-spring.dev" target="_blank" rel="noreferrer">react-spring</a> animations,<a href="https://vercel.com/home" target="_blank" rel="noreferrer">Vercel</a> deployment</div>
                 <div className={styles.note}>Last updated: {websiteData.lastUpdated}</div>
                 <div className={styles.copyright}>© {websiteData.yearCreated} {websiteData.author}</div>
+            </div>
+            <div className={styles.gradientBackground}>
+
             </div>
         </footer>
     );
