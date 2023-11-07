@@ -1,5 +1,23 @@
 export const travelData = [
     {
+        city: "Liverpool",
+        country: "United Kingdom",
+        countryEmoji: '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
+        coordinates: [53.4084, -2.9916],
+        start: new Date(2023, 9),
+        type: 'visited',
+        travelledFrom: 'London',
+    },
+    {
+        city: "Puri",
+        country: "India",
+        countryEmoji: '🇮🇳',
+        coordinates: [19.8135, 85.8312],
+        start: new Date(2023, 8),
+        type: 'visited',
+        travelledFrom: 'Kolkata',
+    },
+    {
         city: "Geneva",
         country: "Switzerland",
         countryEmoji: '🇨🇭',
@@ -326,6 +344,15 @@ export const travelData = [
         start: new Date(2012, 3),
         type: 'visited',
         travelledFrom: 'Sydney',
+    },
+    {
+        city: "Bangkok",
+        country: "Thailand",
+        countryEmoji: '🇹🇭',
+        coordinates: [13.7563, 100.5018],
+        start: new Date(2011, 8),
+        type: 'visited',
+        travelledFrom: 'Panaga',
     },
     {
         city: "Ahmedabad",
